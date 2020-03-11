@@ -23,7 +23,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: mysql-pass
-                  key: passwordmysql-server-5d875b4c97-vhljk
+                  key: password
           ports:
             - containerPort: 3306
           volumeMounts:
