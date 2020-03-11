@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: hello-nginx
 spec:
-  replicas: 2
+  replicas: 6
   selector:
     matchLabels:
       app: hello-nginx
@@ -23,7 +23,10 @@ spec:
               name: nginx-conf
           resources:
             requests:
+              memory: "100Mi"
               cpu: "200m"
+            limits:
+              cpu: "250m"
       volumes:
         - name: nginx-conf
           configMap:
